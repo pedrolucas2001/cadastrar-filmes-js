@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+h3{
+    color: white;
+    text-align: center;
+}
+label{
+    font-weight: bold;
+    color: white;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    background-image: url(imgs/banner2.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#cadastrarFilmes{
+    background-color: rgba(0, 0, 0, 0.703);
+    padding: 80px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+.form-control{
+    background-color: #333;
+    color: white;
+    border: 0px;
+}
+.form-control:focus{
+    background-color: #333;
+    color: white;
+}
+form{
+    max-width: 500px;
+    min-width: 350px;
+
+}
+
+
+/* form{
+    width: 80%;
+    height: 100%;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+input{
+    width: 99%;
+    height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+textarea{
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#btnCadastrar{
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    font-weight: bold;
+   
+}  */

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 7 - Cadastrar filmes</title>
+    <link rel="stylesheet" href="filme.css ">
+</head>
+<!-- 2) faça uma página de cadastramento de filmes onde o usuario possa salvar um filme e suas informações como nome, descrição,data, diretor e categoria e liste ela de alguma forma em algum elemento HTML! -->
+<body>
+    <div id="pagina">
+        
+        <main>
+            <div id="cadastrarFilmes">
+                <form method="post">
+                    <h3>Cadastrar filme</h3><br>
+                    <div class="form-group">
+                      <label for="nomeFilme">Filme:</label>
+                      <input type="text" class="form-control" id="nomeFilme" required placeholder="Digite o nome do filme">
+
+                      <!-- Legenda do input -->
+                      <!-- <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small> -->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dtLancamento">Data de lançamento:</label>
+                        <input type="date" class="form-control" id="dtLancamento" required placeholder="Data que o filme foi lançado">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="diretor">Diretor:</label>
+                        <input type="text" class="form-control" id="diretor" required placeholder="Digite o nome do diretor">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="genero">Gênero</label>
+                        <input type="text" class="form-control" id="genero" required placeholder="Gênero:">
+                        <small id="legendaGenero" class="form-text text-muted">Ex: ação, terror, drama, comédia</small>
+
+                    <br>
+                    <div class="form-group">
+                        <label for="sinopse">Sinopse</label>
+                        <textarea class="form-control" id="sinopse" rows="3" required placeholder="Digite uma breve descrição do filme."></textarea>
+                        </div>
+                    </div>
+                      <br>
+                    <!-- <div class="container d-flex justify-content-center align-items-center"> -->
+                        <div class="d-flex justify-content-around">
+                            <button class="btn btn-dark btn-lg" id="btnResetar" type="reset">Resetar</button>
+                            <button class="btn btn-dark btn-lg" id="btnCadastrar" type="button">Cadastrar</button>
+                        </div>
+                    <!-- </div> -->
+                      
+
+                      
+                    
+                    
+                    
+                  </form>
+                
+                <!-- <form action="#" method="post">
+                    <div id="filme">
+                        <label for="nomeFilme">Filme:</label>
+                        <input type="text" id="nomeFilme" placeholder="Digite o nome do filme">
+                    </div>
+                   
+                    <div id="dtLancamento">
+                        <label for="dtLancamento">Data de lançamento:</label>
+                        <input type="date" id="dtLancamento" placeholder="Digite a data que o filme foi lançado">
+                    </div>
+                    
+                    <div id="diretor">
+                        <label for="diretor">Diretor:</label>
+                        <input type="text" id="diretor" placeholder="Digite o nome do diretor">
+                    </div>
+                    
+                    <div id="genero">
+                        <label for="genero">Gênero:</label>
+                        <input type="text" id="genero" placeholder="Digite o gênero">
+    
+                    </div>
+                   
+                    <div id="sinopse">
+                        <label for="sinopse">Sinopse:</label>
+                        <textarea id="sinope" cols="30" rows="5" placeholder="Digite a sinopse"></textarea>
+                    </div>
+                   
+                    <button type="submit" id="btnCadastrar">Cadastrar</button>
+                </form> -->
+            </div>
+        </main>
+
+
+    </div>
+
+
+    <script src="filme.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
