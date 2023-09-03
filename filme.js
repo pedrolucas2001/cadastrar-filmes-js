@@ -4,13 +4,9 @@ var inputAnoLancamento = document.querySelector("#anoLancamento");
 var inputDiretor = document.querySelector("#diretor");
 var inputGenero = document.querySelector("#genero");
 var inputSinopse = document.querySelector("#sinopse");
-<<<<<<< HEAD
 var btnAdicionar = document.querySelector("#btnAdicionar");
-=======
-var btnCadastrar = document.querySelector("#btnCadastrar");
-var btnVerFilmes = document.querySelector("#btnVerFilmes");
 
->>>>>>> 02eaa64bd7ebb2123170db7eb1da02830f01e1eb
+
 
 //Contrutor(mode) pré definido para criação de OBJETOS
 class Filme{
@@ -71,8 +67,7 @@ btnAdicionar.addEventListener("click",()=>{
 var filmeCadastrado = document.querySelector("#filmeCadastrado");
 
 btnVerFilmes.addEventListener("click",()=>{
-    window.location.href = "file:///C:/Users/Aluno%20Manh%C3%A3/Desktop/PL/js/objetos/cadastrar-filmes-js/home.html";
-    filmeCadastrado.innerHTML = `Nome: ${inputFilme.value}`
+  alert("OI");
     
 })
 
