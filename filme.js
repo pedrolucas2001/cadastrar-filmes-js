@@ -4,7 +4,13 @@ var inputAnoLancamento = document.querySelector("#anoLancamento");
 var inputDiretor = document.querySelector("#diretor");
 var inputGenero = document.querySelector("#genero");
 var inputSinopse = document.querySelector("#sinopse");
+<<<<<<< HEAD
 var btnAdicionar = document.querySelector("#btnAdicionar");
+=======
+var btnCadastrar = document.querySelector("#btnCadastrar");
+var btnVerFilmes = document.querySelector("#btnVerFilmes");
+
+>>>>>>> 02eaa64bd7ebb2123170db7eb1da02830f01e1eb
 
 //Contrutor(mode) pré definido para criação de OBJETOS
 class Filme{
@@ -17,6 +23,7 @@ class Filme{
     }
 }
 
+//Criando ARRAY de filmes
 var filmes = [
     new Filme("Poderoso chefão","1972","Francis Ford Coppola","Drama","O patriarca idoso de uma dinastia do crime organizado transfere o controle de seu império clandestino para seu filho relutante."),
     new Filme("O jogo da imitação","2014","Morten Tyldum","Drama","Durante a segunda guerra mundial, um inglês gênio da matemática tenta decifrar o código alemão Enigma com a ajuda de seus colegas."),
@@ -25,9 +32,10 @@ var filmes = [
 
 btnAdicionar.addEventListener("click",()=>{
 
+        // Validando para que nenhum campo vazio seja enviado para o array
         if(inputFilme.value == "" || inputFilme.value == undefined || inputFilme.value == null){
             alert("Por favor digite o nome do filme");
-        }else if(inputAnoLancamento.value == "" || inputAnoLancamento == null || inputAnoLancamento == undefined){
+        }else if(inputAnoLancamento.value == "" || inputAnoLancamento.value == null || inputAnoLancamento.value == undefined){
             alert("Por favor digite a data de lancamento")
         }else if(inputDiretor.value == "" || inputDiretor.value == undefined || inputDiretor.value == null){
             alert("Por favor digite o nome do diretor");
@@ -38,10 +46,16 @@ btnAdicionar.addEventListener("click",()=>{
     
         }else{
             alert("Tem certeza que todas as informações estão corretas?")
-            filmes.push(new Filme(inputFilme.value,inputAnoLancamento.value,inputDiretor.value,inputGenero.value,inputSinopse.value));
+            //Caso todos campos estejam preenchidos empurrar o OBJETO no ARRAY
+            let nomeFilme = inputFilme.value;
+            let anoFilme = inputAnoLancamento.value;
+            let nomeDiretor = inputDiretor.value;
+            let genero = inputGenero.value;
+            let sinopse = inputSinopse.value;
+            filmes.push(new Filme(nomeFilme,anoFilme,nomeDiretor,genero,sinopse));
         
             alert("Filme cadastrado com sucesso!");
-    
+            //Após o filme ser cadastrado, apagar todos os campos para inserção de novo filme
             function apagarCampos(){
                 inputFilme.value = "";
                 inputAnoLancamento.value = "";
@@ -52,6 +66,14 @@ btnAdicionar.addEventListener("click",()=>{
         apagarCampos();
         
     }
+})
+
+var filmeCadastrado = document.querySelector("#filmeCadastrado");
+
+btnVerFilmes.addEventListener("click",()=>{
+    window.location.href = "file:///C:/Users/Aluno%20Manh%C3%A3/Desktop/PL/js/objetos/cadastrar-filmes-js/home.html";
+    filmeCadastrado.innerHTML = `Nome: ${inputFilme.value}`
+    
 })
 
 console.log(filmes);
