@@ -15,31 +15,70 @@
     <div id="pagina">
         
         <main>
+            <header>
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-camera-reels-fill" viewBox="0 0 16 16">
+                    <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                    <path d="M9 6a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                    <path d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7z"/>
+                  </svg>
+                <h3 id="tituloMyFavoriteMovies">My <span id="txtFavorite">Favorite</span> Movies</h3><br>
+            </header>
+            
+        <!-- Início da div do formulário -->
             <div id="cadastrarFilmes">
                 <form method="post">
-                    <h3>Cadastrar filme</h3><br>
+                    <h4>NOVO FILME</h4> <br>
                     <div class="form-group">
-                      <label for="nomeFilme">Filme:</label>
-                      <input type="text" class="form-control" id="nomeFilme" required placeholder="Digite o nome do filme">
-
+                        <div class="form-row">
+                            <div class="col-8">
+                                <label for="nomeFilme">Título</label>
+                                <input type="text" class="form-control" id="tituloFilme" required placeholder="Digite o nome do filme">
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <label for="anoLancamento">Ano de lançamento</label>
+                                    <input type="number" class="form-control" id="anoLancamento" required placeholder="Ex: 2012">
+                                </div>
+                            </div>
+                        </div>
+                      
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="diretor">Diretor</label>
+                                    <input type="text" class="form-control" id="diretor" required placeholder="Digite o nome do diretor">
+                                </div>
+                                
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="genero" >Gênero</label>
+                                    
+                                    <select class="form-control" id="genero" >
+                                      <option value="" disabled selected id="inputSelecioneOpcao">Selecione uma opção</option>
+                                      <option value="Acao">Ação</option>
+                                      <option value="Drama">Drama</option>
+                                      <option value="Terror">Terror</option>
+                                      <option value="Comedia">Comédia</option>
+                                      <option value="Suspense">Suspense</option>
+                                      <option value="Documentario">Documentário</option>
+                                      <option value="Outros">Outro</option>
+                                      
+                                    </select>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                      
                       <!-- Legenda do input -->
                       <!-- <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small> -->
-                    </div>
+                    
 
-                    <div class="form-group">
-                        <label for="anoLancamento">Ano de lançamento:</label>
-                        <input type="date" class="form-control" id="anoLancamento" required placeholder="Data que o filme foi lançado">
-                    </div>
+                    
 
-                    <div class="form-group">
-                        <label for="diretor">Diretor:</label>
-                        <input type="text" class="form-control" id="diretor" required placeholder="Digite o nome do diretor">
-                    </div>
+                   
 
-                    <div class="form-group">
-                        <label for="genero">Gênero</label>
-                        <input type="text" class="form-control" id="genero" required placeholder="Gênero:">
-                        <small id="legendaGenero" class="form-text text-muted">Ex: ação, terror, drama, comédia</small>
+                   
 
                     <br>
                     <div class="form-group">
@@ -48,11 +87,26 @@
                         </div>
                     </div>
                       <br>
-                        <div class="d-flex justify-content-between">
-                            <button class="btn btn-dark btn-lg" id="btnResetar" type="reset">Resetar</button>
-                            <button class="btn btn-dark btn-lg" id="btnCadastrar" type="button">Cadastrar</button>
+                        <div id="botoes">
+                            <button class="btn  btn-lg" id="btnAdicionar" type="submit">Adicionar</button>
+                            
                         </div>
-              
+                </form>
+            </div>
+
+            <div id="tabelaDeFilmesCadastrados">
+                <table class="table table-dark  mt-4">
+                    <thead>
+                      <tr id="linhaTitulosFilmesCadastrados">
+                        <th scope="col">Título</th>
+                        <th scope="col">Diretor</th>
+                        <th scope="col">Ano de lançamento</th>
+                        <th scope="col">Gênero</th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody id="lista-de-filmes"></tbody>
+                  </table>
             </div>
         </main>
 

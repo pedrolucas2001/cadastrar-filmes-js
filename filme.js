@@ -4,7 +4,7 @@ var inputAnoLancamento = document.querySelector("#anoLancamento");
 var inputDiretor = document.querySelector("#diretor");
 var inputGenero = document.querySelector("#genero");
 var inputSinopse = document.querySelector("#sinopse");
-var btnCadastrar = document.querySelector("#btnCadastrar");
+var btnAdicionar = document.querySelector("#btnAdicionar");
 
 //Contrutor(mode) pré definido para criação de OBJETOS
 class Filme{
@@ -23,7 +23,7 @@ var filmes = [
     new Filme("Snowden: Herói ou Traidor","2016","Oliver Stone","Biografia","As técnicas ilegais da vigilância do NSA são filtradas ao público por um empregado deles, Edward Snowden, em forma de documentos classificados e dados a prensa.")
 ];
 
-btnCadastrar.addEventListener("click",()=>{
+btnAdicionar.addEventListener("click",()=>{
 
         if(inputFilme.value == "" || inputFilme.value == undefined || inputFilme.value == null){
             alert("Por favor digite o nome do filme");
