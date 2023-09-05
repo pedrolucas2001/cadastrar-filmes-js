@@ -25,15 +25,30 @@ label{
 }
 header{ 
     top: 0px;
-    width: 40%;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.795);
     display: flex;
-    align-items: center;
-    margin: 20px auto;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
+    margin: 0px 0px 100px 0px ;
 }
 
-
+#ladoEsquerdo{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+#ladoDireito{
+    display: flex;
+    padding: 20px;
+}
+#btnHome{
+    width: 130px;
+    color: white;
+    font-weight: bold;
+    background-color: orangered;
+    border-radius: 10px;
+}
 main{
     width: 100%;
     height: 100vh;
@@ -49,7 +64,7 @@ main{
 #cadastrarFilmes{
     width: 50%;
     height: auto;
-    background-color: rgba(0, 0, 0, 0.703);
+    background-color: rgba(0, 0, 0, 0.795);
     padding: 50px;
     border-radius: 10px;
     display: flex;
@@ -130,7 +145,7 @@ form{
     width: 100%;
     height: 100%;
     border: 0px;
-    background-color: red;
+    background-color: orangered;
     border-radius: 10px;
     color: white;
     font-weight: bold;
@@ -139,6 +154,7 @@ form{
   #btnVerFilmes:hover{
     background-color: white;
     color: red;
+    cursor: pointer;
   }
 
  
